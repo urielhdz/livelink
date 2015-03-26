@@ -1,0 +1,23 @@
+<h1>Listing My Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_links.each do |my_link| %>
+      <tr>
+        <td><%= link_to 'Show', my_link %></td>
+        <td><%= link_to 'Edit', edit_my_link_path(my_link) %></td>
+        <td><%= link_to 'Destroy', my_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My link', new_my_link_path %>

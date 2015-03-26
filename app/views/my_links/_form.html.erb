@@ -1,0 +1,27 @@
+<%= form_for(@my_link, remote: true,html: { :"data-type" => "json" }) do |f| %>
+  <% if @my_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@my_link.errors.count, "error") %> prohibited this my_link from being saved:</h2>
+
+      <ul>
+      <% @my_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row center-xs">
+    <%= grid_md_8 class: "text-left" do%>
+      <div class="field">
+        <%= f.url_field :link, class: "form-control", placeholder: "URL", required: true %>
+      </div>
+    <%end%>
+    <%= grid_md_4 class: "text-right" do%>
+      <div class="actions">
+        <%= f.submit "Guardar", class: "btn red white-text" %>
+      </div>
+    <%end%>
+  </div>
+  
+  
+<% end %>

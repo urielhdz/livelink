@@ -1,0 +1,12 @@
+<header style="padding:0px;">
+	<nav class="large-padding red ">
+		<ul class="no-list">
+			<li><%= link_to "Inicio", root_path, class:"white-text" %></li>
+			<%if user_signed_in?%>
+				<li>
+					<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class:"white-text" %>
+				</li>
+			<%end%>
+		</ul>
+	</nav>
+</header>

@@ -1,0 +1,8 @@
+<% favorite ||= "true" %>
+<div class="top-space text-left">
+	<h2><%= link_to my_link.link, my_link %> 
+	<% if favorite != "false" %>
+		<%= link_to "Favorito", my_favorite_links_path, method: :post, class:"yellow-text add-favorite", data: { id: my_link.id } %> 
+	<%end%>
+	</h2>
+</div>

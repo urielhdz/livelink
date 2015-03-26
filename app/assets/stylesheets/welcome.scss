@@ -1,0 +1,61 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html,body{
+	height:100%;
+	margin:0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+h3{
+	font-size:2em;
+	color: rgb(200,50,50);
+}
+.full-height{
+	height:100%;
+}
+.right-space{
+	margin-right:1em;
+}
+.text-left{
+	text-align:left;
+}
+.text-right{
+	text-align:right;
+}
+.form-control{
+	width:100%;
+	border:none;
+	border-bottom:solid 1px;
+	outline:none;
+	padding:10px 15px;
+	font-size:1.3em;
+}
+.red{
+	background-color:rgb(200,50,50);
+}
+.large-padding{
+	padding:10px 15px;
+}
+.no-list{
+	list-style-type:none;
+}
+.no-list li{
+	display:inline-block;
+	margin-right:1.5em;
+}
+.white-text{
+	color: white !important;
+}
+.top-space{
+	margin-top:1em;
+}
+.yellow-text{
+	color:#f1c40f !important;
+}
+.btn{
+	padding: 10px 15px;
+	text-transform: uppercase;
+	font-size:1.3em;
+	border: none;
+}

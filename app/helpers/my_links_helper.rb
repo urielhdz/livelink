@@ -1,0 +1,2 @@
+module MyLinksHelper
+end

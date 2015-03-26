@@ -1,0 +1,34 @@
+<div class="full-height row center-xs">
+	<%= grid_md_11 class: "middle-xs" do%>
+		<h1>Bienvenido <%= current_user.email %></h1>
+		<%= render 'my_links/form' %>
+		<div class="row">
+			<%= grid_md_6 class:"text-left" do%>
+				<h3>Mis links</h3>
+				<div class="top-space" id="links">
+					<% current_user.my_links.each do |my_link| %>
+						<%= render "my_links/my_link", my_link: my_link %>
+					<%end%>
+				</div>
+			<%end%>
+
+			<%= grid_md_6 class:"text-left" do%>
+				<h3>Feed links</h3>
+				<div class="top-space">
+					<% @my_links.each do |my_link| %>
+						<%= render "my_links/my_link", my_link: my_link %>
+					<%end%>
+				</div>
+			<%end%>
+
+			<%= grid_md_6 class:"text-left" do%>
+				<h3>Links favortes</h3>
+				<div class="top-space">
+					<% @my_favorite_links.each do |my_favorite_link| %>
+						<%= render "my_links/my_link", my_link: my_favorite_link.my_link, favorite: "false" %>
+					<%end%>
+				</div>
+			<%end%>
+		</div>		
+	<%end%>
+</div>
